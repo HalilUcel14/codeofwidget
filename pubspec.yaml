@@ -1,7 +1,7 @@
 name: codeofwidget
-description: A new Flutter package project.
+description: Tüm projelerimde ortak kullanabileceğim kodları barındırması amacı ile yazılmış bir pakettir. Paketi Readme.md dosyasını okuyarak aktif kullanabilirsiniz.
 version: 0.0.1
-homepage:
+homepage: https://github.com/HalilUcel14/codeofwidget.git
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
