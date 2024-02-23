@@ -41,7 +41,6 @@ final class OnSecondaryText extends Text {
       textAlign: textAlign,
       textDirection: textDirection,
       textHeightBehavior: textHeightBehavior,
-      textScaleFactor: textScaleFactor,
       textWidthBasis: textWidthBasis,
     );
   }

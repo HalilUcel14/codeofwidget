@@ -13,7 +13,7 @@ class RowWithSpacing extends Row {
     super.textBaseline,
     List<Widget> children = const [],
   }) : super(children: [
-          ...hasLeadingSpace ? [SizedBox(height: spacing)] : <Widget>[],
+          ...hasLeadingSpace ? [SizedBox(width: spacing)] : <Widget>[],
           ...children.expand((element) => [element, SizedBox(height: spacing)]),
         ]);
 }

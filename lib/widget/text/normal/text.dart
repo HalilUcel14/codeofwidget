@@ -25,6 +25,7 @@ final class WText extends Text {
     super.textHeightBehavior,
     super.textScaleFactor,
     super.textWidthBasis,
+    super.textScaler,
   });
 
   @override
@@ -50,7 +51,7 @@ final class WText extends Text {
       textAlign: textAlign,
       textDirection: textDirection,
       textHeightBehavior: textHeightBehavior,
-      textScaleFactor: textScaleFactor,
+      textScaler: textScaler,
       textWidthBasis: textWidthBasis,
     );
   }
