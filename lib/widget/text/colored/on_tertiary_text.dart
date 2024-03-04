@@ -1,10 +1,10 @@
 import 'package:codeofwidget/codeofwidget.dart';
 import 'package:flutter/material.dart';
 
-final class OnSecondaryText extends Text {
+final class OnTertiaryText extends Text {
   final TextStyles styles;
   //
-  const OnSecondaryText(
+  const OnTertiaryText(
     super.data, {
     required this.styles,
     super.key,
@@ -36,7 +36,7 @@ final class OnSecondaryText extends Text {
       softWrap: softWrap,
       strutStyle: strutStyle,
       style: style?.merge(styles.style(context)).copyWith(
-            color: context.colorScheme.onSecondary,
+            color: context.colorScheme.onTertiary,
           ),
       textAlign: textAlign,
       textDirection: textDirection,
@@ -46,10 +46,10 @@ final class OnSecondaryText extends Text {
   }
 }
 
-final class OnSecondaryContainerText extends Text {
+final class OnTertiaryContainerText extends Text {
   final TextStyles styles;
   //
-  const OnSecondaryContainerText(
+  const OnTertiaryContainerText(
     super.data, {
     required this.styles,
     super.key,
@@ -81,7 +81,7 @@ final class OnSecondaryContainerText extends Text {
       softWrap: softWrap,
       strutStyle: strutStyle,
       style: style?.merge(styles.style(context)).copyWith(
-            color: context.colorScheme.onSecondaryContainer,
+            color: context.colorScheme.onTertiaryContainer,
           ),
       textAlign: textAlign,
       textDirection: textDirection,

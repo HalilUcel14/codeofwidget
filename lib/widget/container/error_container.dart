@@ -26,10 +26,10 @@ final class ErrorContainer extends Container {
     return ErrorContainer(
       alignment: super.alignment,
       clipBehavior: super.clipBehavior,
-      color:
-          super.decoration == null ? context.colorScheme.errorContainer : null,
+      color: decorations == null ? context.colorScheme.errorContainer : null,
       constraints: super.constraints,
-      decorations: decorations?..boxColor = context.colorScheme.errorContainer,
+      decorations: decorations
+        ?..customColor = context.colorScheme.errorContainer,
       foregroundDecoration: super.foregroundDecoration,
       key: super.key,
       margin: super.margin,

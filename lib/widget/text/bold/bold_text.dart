@@ -7,13 +7,13 @@ final class BoldText extends Text {
   const BoldText(
     super.data, {
     required this.styles,
+    super.style,
     super.key,
     super.locale,
     super.maxLines,
     super.overflow,
     super.selectionColor,
     super.semanticsLabel,
-    super.style,
     super.softWrap,
     super.strutStyle,
     super.textAlign,

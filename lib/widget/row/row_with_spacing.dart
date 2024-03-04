@@ -14,6 +14,6 @@ class RowWithSpacing extends Row {
     List<Widget> children = const [],
   }) : super(children: [
           ...hasLeadingSpace ? [SizedBox(width: spacing)] : <Widget>[],
-          ...children.expand((element) => [element, SizedBox(height: spacing)]),
+          ...children.expand((element) => [element, SizedBox(width: spacing)]),
         ]);
 }

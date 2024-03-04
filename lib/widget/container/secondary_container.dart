@@ -26,12 +26,11 @@ final class SecondaryContainer extends Container {
     return SecondaryContainer(
       alignment: super.alignment,
       clipBehavior: super.clipBehavior,
-      color: super.decoration == null
-          ? context.colorScheme.secondaryContainer
-          : null,
+      color:
+          decorations == null ? context.colorScheme.secondaryContainer : null,
       constraints: super.constraints,
       decorations: decorations
-        ?..boxColor = context.colorScheme.secondaryContainer,
+        ?..customColor = context.colorScheme.secondaryContainer,
       foregroundDecoration: super.foregroundDecoration,
       key: super.key,
       margin: super.margin,

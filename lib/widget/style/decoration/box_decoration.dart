@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
 
 final class CustomBoxDecoration extends BoxDecoration {
-  late final Color? boxColor;
   //
+  late final Color? customColor;
+  //
+  // ignore: prefer_const_constructors_in_immutables
   CustomBoxDecoration({
-    super.backgroundBlendMode,
-    super.border,
-    super.borderRadius,
-    super.boxShadow,
-    super.gradient,
-    super.image,
-    super.shape,
     Color? color,
-  }) {
-    boxColor = color;
-  }
+  })  : customColor = color,
+        super(color: color);
 }

@@ -26,12 +26,10 @@ final class TertiaryContainer extends Container {
     return TertiaryContainer(
       alignment: super.alignment,
       clipBehavior: super.clipBehavior,
-      color: super.decoration == null
-          ? context.colorScheme.tertiaryContainer
-          : null,
+      color: decorations == null ? context.colorScheme.tertiaryContainer : null,
       constraints: super.constraints,
       decorations: decorations
-        ?..boxColor = context.colorScheme.tertiaryContainer,
+        ?..customColor = context.colorScheme.tertiaryContainer,
       foregroundDecoration: super.foregroundDecoration,
       key: super.key,
       margin: super.margin,
