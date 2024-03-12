@@ -2,7 +2,7 @@ import 'package:codeofwidget/codeofwidget.dart';
 import 'package:flutter/material.dart';
 
 final class BoldText extends Text {
-  final TextStyles styles;
+  final TextStyleType styles;
   //
   const BoldText(
     super.data, {
@@ -35,13 +35,11 @@ final class BoldText extends Text {
       semanticsLabel: semanticsLabel,
       softWrap: softWrap,
       strutStyle: strutStyle,
-      style: style
-          ?.merge(
-            styles.style(context),
-          )
-          .copyWith(
-            fontWeight: FontWeight.bold,
-          ),
+      style: style?.copyWith(
+        fontWeight: FontWeight.bold,
+        fontSize: styles.fontSize,
+        letterSpacing: styles.letterSpacing,
+      ),
       textAlign: textAlign,
       textDirection: textDirection,
       textHeightBehavior: textHeightBehavior,
@@ -49,3 +47,5 @@ final class BoldText extends Text {
     );
   }
 }
+
+// TODO: Change Text Type by SiteYonetim
