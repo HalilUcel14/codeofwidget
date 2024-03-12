@@ -1,7 +1,7 @@
 import 'package:codeofwidget/codeofwidget.dart';
 import 'package:flutter/material.dart';
 
-enum TextStyles {
+enum TextStyleType {
   displayLarge(57, FontWeight.w400, -0.25),
   displayMedium(45, FontWeight.w400, 0),
   displaySmall(36, FontWeight.w400, 0),
@@ -23,7 +23,7 @@ enum TextStyles {
   final FontWeight fontWeight;
   final double letterSpacing;
 
-  const TextStyles(this.fontSize, this.fontWeight, this.letterSpacing);
+  const TextStyleType(this.fontSize, this.fontWeight, this.letterSpacing);
 
   TextStyle? style(BuildContext context) => switch (this) {
         displayLarge => context.textTheme.displayLarge?.copyWith(

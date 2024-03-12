@@ -2,7 +2,7 @@ import 'package:codeofwidget/codeofwidget.dart';
 import 'package:flutter/material.dart';
 
 final class WText extends Text {
-  final TextStyles styles;
+  final TextStyleType styles;
   final WFontWeigth fontType;
   final WColor color;
   //

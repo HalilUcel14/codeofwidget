@@ -2,7 +2,7 @@ import 'package:codeofwidget/codeofwidget.dart';
 import 'package:flutter/material.dart';
 
 final class OnPrimaryText extends Text {
-  final TextStyles styles;
+  final TextStyleType styles;
   //
   const OnPrimaryText(
     super.data, {
@@ -47,7 +47,7 @@ final class OnPrimaryText extends Text {
 }
 
 final class OnPrimaryContainerText extends Text {
-  final TextStyles styles;
+  final TextStyleType styles;
   //
   const OnPrimaryContainerText(
     super.data, {
