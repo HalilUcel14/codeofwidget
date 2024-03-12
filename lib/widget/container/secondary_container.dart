@@ -2,16 +2,15 @@ import 'package:codeofwidget/codeofwidget.dart';
 import 'package:flutter/material.dart';
 
 final class SecondaryContainer extends Container {
-  final CustomBoxDecoration? decorations;
+  final CustomBoxDecoration? boxDecoration;
 
   SecondaryContainer({
     super.key,
     super.alignment,
     super.child,
     super.clipBehavior,
-    super.color,
     super.constraints,
-    this.decorations,
+    this.boxDecoration,
     super.foregroundDecoration,
     super.height,
     super.width,
@@ -23,14 +22,13 @@ final class SecondaryContainer extends Container {
 
   @override
   Widget build(BuildContext context) {
-    return SecondaryContainer(
+    Color customColor = context.colorScheme.secondaryContainer;
+    return Container(
       alignment: super.alignment,
       clipBehavior: super.clipBehavior,
-      color:
-          decorations == null ? context.colorScheme.secondaryContainer : null,
+      color: boxDecoration == null ? customColor : null,
       constraints: super.constraints,
-      decorations: decorations
-        ?..customColor = context.colorScheme.secondaryContainer,
+      decoration: boxDecoration?..colors = customColor,
       foregroundDecoration: super.foregroundDecoration,
       key: super.key,
       margin: super.margin,

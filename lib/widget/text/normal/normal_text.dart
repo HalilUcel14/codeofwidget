@@ -1,23 +1,21 @@
 import 'package:codeofwidget/codeofwidget.dart';
 import 'package:flutter/material.dart';
 
-final class WText extends Text {
-  final TextStyleType styles;
-  final WFontWeigth fontType;
-  final WColor color;
+final class WNormalText extends Text {
+  final WTextStyle wStyle;
+  final WTextColor wColor;
   //
-  const WText(
+  const WNormalText(
     super.data, {
-    required this.styles,
-    required this.fontType,
-    required this.color,
+    this.wStyle = WTextStyle.bodyLarge,
+    this.wColor = WTextColor.onBackground,
+    super.style,
     super.key,
     super.locale,
     super.maxLines,
     super.overflow,
     super.selectionColor,
     super.semanticsLabel,
-    super.style,
     super.softWrap,
     super.strutStyle,
     super.textAlign,
@@ -25,7 +23,6 @@ final class WText extends Text {
     super.textHeightBehavior,
     super.textScaleFactor,
     super.textWidthBasis,
-    super.textScaler,
   });
 
   @override
@@ -40,19 +37,18 @@ final class WText extends Text {
       semanticsLabel: semanticsLabel,
       softWrap: softWrap,
       strutStyle: strutStyle,
-      style: style
-          ?.merge(
-            styles.style(context),
-          )
-          .copyWith(
-            fontWeight: fontType.fontWeight,
-            color: color.color(context),
-          ),
+      style: style?.copyWith(
+        fontWeight: FontWeight.bold,
+        fontSize: wStyle.fontSize,
+        letterSpacing: wStyle.letterSpacing,
+        color: wColor.color(context),
+      ),
       textAlign: textAlign,
       textDirection: textDirection,
       textHeightBehavior: textHeightBehavior,
-      textScaler: textScaler,
       textWidthBasis: textWidthBasis,
     );
   }
 }
+
+// TODO: Change Text Type by SiteYonetim

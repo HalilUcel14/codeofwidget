@@ -63,7 +63,7 @@ extension WidgetInWidgetExtension on Widget {
     );
   }
 
-  SizedBox withSizedBox({required double height, required double width}) {
+  SizedBox withSizedBox({double? height, double? width}) {
     return SizedBox(
       height: height,
       width: width,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum WFontWeigth {
+enum WFontWeight {
   bold(FontWeight.bold),
   medium(FontWeight.w500),
   normal(FontWeight.normal),
@@ -8,5 +8,5 @@ enum WFontWeigth {
   ;
 
   final FontWeight fontWeight;
-  const WFontWeigth(this.fontWeight);
+  const WFontWeight(this.fontWeight);
 }

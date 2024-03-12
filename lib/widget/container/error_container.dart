@@ -2,16 +2,15 @@ import 'package:codeofwidget/codeofwidget.dart';
 import 'package:flutter/material.dart';
 
 final class ErrorContainer extends Container {
-  final CustomBoxDecoration? decorations;
+  final CustomBoxDecoration? boxDecoration;
 
   ErrorContainer({
     super.key,
+    this.boxDecoration,
     super.alignment,
     super.child,
     super.clipBehavior,
-    super.color,
     super.constraints,
-    this.decorations,
     super.foregroundDecoration,
     super.height,
     super.width,
@@ -23,13 +22,13 @@ final class ErrorContainer extends Container {
 
   @override
   Widget build(BuildContext context) {
-    return ErrorContainer(
+    Color customColor = context.colorScheme.errorContainer;
+    return Container(
       alignment: super.alignment,
       clipBehavior: super.clipBehavior,
-      color: decorations == null ? context.colorScheme.errorContainer : null,
+      color: boxDecoration == null ? customColor : null,
       constraints: super.constraints,
-      decorations: decorations
-        ?..customColor = context.colorScheme.errorContainer,
+      decoration: boxDecoration?..colors = customColor,
       foregroundDecoration: super.foregroundDecoration,
       key: super.key,
       margin: super.margin,

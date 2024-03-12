@@ -5,12 +5,12 @@ final class PrimaryContainer extends Container {
   final CustomBoxDecoration? boxDecoration;
   PrimaryContainer({
     super.key,
+    this.boxDecoration,
     super.alignment,
     super.child,
     super.clipBehavior,
     super.constraints,
     super.foregroundDecoration,
-    this.boxDecoration,
     super.height,
     super.width,
     super.margin,
@@ -21,14 +21,13 @@ final class PrimaryContainer extends Container {
 
   @override
   Widget build(BuildContext context) {
+    Color customColor = context.colorScheme.primaryContainer;
     return Container(
       alignment: super.alignment,
       clipBehavior: super.clipBehavior,
-      color:
-          boxDecoration == null ? context.colorScheme.primaryContainer : null,
+      color: boxDecoration == null ? customColor : null,
       constraints: super.constraints,
-      decoration: boxDecoration
-        ?..customColor = context.colorScheme.primaryContainer,
+      decoration: boxDecoration?..colors = customColor,
       foregroundDecoration: super.foregroundDecoration,
       key: super.key,
       margin: super.margin,

@@ -2,16 +2,15 @@ import 'package:codeofwidget/codeofwidget.dart';
 import 'package:flutter/material.dart';
 
 final class TertiaryContainer extends Container {
-  final CustomBoxDecoration? decorations;
+  final CustomBoxDecoration? boxDecoration;
 
   TertiaryContainer({
     super.key,
     super.alignment,
     super.child,
     super.clipBehavior,
-    super.color,
     super.constraints,
-    this.decorations,
+    this.boxDecoration,
     super.foregroundDecoration,
     super.height,
     super.width,
@@ -23,13 +22,13 @@ final class TertiaryContainer extends Container {
 
   @override
   Widget build(BuildContext context) {
-    return TertiaryContainer(
+    Color customColor = context.colorScheme.errorContainer;
+    return Container(
       alignment: super.alignment,
       clipBehavior: super.clipBehavior,
-      color: decorations == null ? context.colorScheme.tertiaryContainer : null,
+      color: boxDecoration == null ? customColor : null,
       constraints: super.constraints,
-      decorations: decorations
-        ?..customColor = context.colorScheme.tertiaryContainer,
+      decoration: boxDecoration?..colors = customColor,
       foregroundDecoration: super.foregroundDecoration,
       key: super.key,
       margin: super.margin,

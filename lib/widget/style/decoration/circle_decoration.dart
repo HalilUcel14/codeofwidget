@@ -10,6 +10,5 @@ final class CircleBoxDecoration extends BoxDecoration {
     super.gradient,
     super.image,
     super.color,
-    super.shape = BoxShape.circle,
-  });
+  }) : super(shape: BoxShape.circle);
 }

@@ -14,9 +14,9 @@ final class CircleButton extends ElevatedButton {
     required super.onPressed,
     required super.child,
   }) : super(
-          style: styles?.merge(
-            ElevatedButton.styleFrom(
-              shape: const CircleBorder(),
+          style: styles?.copyWith(
+            shape: MaterialStateProperty.all(
+              const CircleBorder(),
             ),
           ),
         );

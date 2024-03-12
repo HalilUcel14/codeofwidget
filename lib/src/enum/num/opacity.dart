@@ -1,4 +1,4 @@
-enum OpacityEnum {
+enum WOpacity {
   low(0.6),
   normal(0.8),
   high(0.9),
@@ -6,5 +6,5 @@ enum OpacityEnum {
   ;
 
   final double size;
-  const OpacityEnum(this.size);
+  const WOpacity(this.size);
 }

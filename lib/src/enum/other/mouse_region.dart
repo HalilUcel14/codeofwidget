@@ -1,1 +1,1 @@
-enum MouseRegionEnum { onEnter, onExit, onHover }
+enum WMouseRegion { onEnter, onExit, onHover }

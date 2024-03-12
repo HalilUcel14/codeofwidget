@@ -3,30 +3,31 @@ import 'package:flutter/material.dart';
 
 class MouseCursorWidget extends StatefulWidget {
   const MouseCursorWidget({super.key, required this.builder});
-  final Widget Function(BuildContext context, MouseRegionEnum value) builder;
+
+  final Widget Function(BuildContext context, WMouseRegion value) builder;
 
   @override
   State<MouseCursorWidget> createState() => _MouseCursorWidgetState();
 }
 
 class _MouseCursorWidgetState extends State<MouseCursorWidget> {
-  MouseRegionEnum _mouseRegionEnum = MouseRegionEnum.onExit;
+  WMouseRegion _mouseRegionEnum = WMouseRegion.onExit;
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
       onEnter: (event) {
         setState(() {
-          _mouseRegionEnum = MouseRegionEnum.onEnter;
+          _mouseRegionEnum = WMouseRegion.onEnter;
         });
       },
       onExit: (event) {
         setState(() {
-          _mouseRegionEnum = MouseRegionEnum.onExit;
+          _mouseRegionEnum = WMouseRegion.onExit;
         });
       },
       onHover: (event) {
         setState(() {
-          _mouseRegionEnum = MouseRegionEnum.onHover;
+          _mouseRegionEnum = WMouseRegion.onHover;
         });
       },
       cursor: SystemMouseCursors.click,

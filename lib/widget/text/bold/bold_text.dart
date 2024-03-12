@@ -1,12 +1,14 @@
 import 'package:codeofwidget/codeofwidget.dart';
 import 'package:flutter/material.dart';
 
-final class BoldText extends Text {
-  final TextStyleType styles;
+final class WBoldText extends Text {
+  final WTextStyle wStyle;
+  final WTextColor wColor;
   //
-  const BoldText(
+  const WBoldText(
     super.data, {
-    required this.styles,
+    this.wStyle = WTextStyle.bodyLarge,
+    this.wColor = WTextColor.onBackground,
     super.style,
     super.key,
     super.locale,
@@ -37,8 +39,9 @@ final class BoldText extends Text {
       strutStyle: strutStyle,
       style: style?.copyWith(
         fontWeight: FontWeight.bold,
-        fontSize: styles.fontSize,
-        letterSpacing: styles.letterSpacing,
+        fontSize: wStyle.fontSize,
+        letterSpacing: wStyle.letterSpacing,
+        color: wColor.color(context),
       ),
       textAlign: textAlign,
       textDirection: textDirection,

@@ -1,4 +1,4 @@
-enum PercentEnum {
+enum WPercent {
   pTen(0.1),
   pTwenty(0.2),
   pQuarter(0.25),
@@ -14,5 +14,5 @@ enum PercentEnum {
   ;
 
   final double size;
-  const PercentEnum(this.size);
+  const WPercent(this.size);
 }

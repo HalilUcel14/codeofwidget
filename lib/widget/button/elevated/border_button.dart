@@ -14,9 +14,9 @@ final class BorderButton extends ElevatedButton {
     required super.onPressed,
     required super.child,
   }) : super(
-          style: styles?.merge(
-            ElevatedButton.styleFrom(
-              shape: const StadiumBorder(),
+          style: styles?.copyWith(
+            shape: MaterialStateProperty.all(
+              const StadiumBorder(),
             ),
           ),
         );
