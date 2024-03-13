@@ -70,4 +70,15 @@ extension WidgetInWidgetExtension on Widget {
       child: this,
     );
   }
+
+  AspectRatio aspectRatio(double ratio, {Key? key}) => AspectRatio(
+        key: key,
+        aspectRatio: ratio,
+        child: this,
+      );
+
+  Center center({Key? key}) => Center(
+        key: key,
+        child: this,
+      );
 }
