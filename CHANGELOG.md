@@ -1,4 +1,8 @@
 
+# 1.3.1
+
+* TODO: Change TextStyle
+
 # 1.3.0
 
 * TODO: New Code

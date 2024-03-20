@@ -37,12 +37,19 @@ final class WBoldText extends Text {
       semanticsLabel: semanticsLabel,
       softWrap: softWrap,
       strutStyle: strutStyle,
-      style: style?.copyWith(
-        fontWeight: FontWeight.bold,
-        fontSize: wStyle.fontSize,
-        letterSpacing: wStyle.letterSpacing,
-        color: wColor.color(context),
-      ),
+      style: style != null
+          ? style!.copyWith(
+              fontWeight: FontWeight.bold,
+              fontSize: wStyle.fontSize,
+              letterSpacing: wStyle.letterSpacing,
+              color: wColor.color(context),
+            )
+          : TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: wStyle.fontSize,
+              letterSpacing: wStyle.letterSpacing,
+              color: wColor.color(context),
+            ),
       textAlign: textAlign,
       textDirection: textDirection,
       textHeightBehavior: textHeightBehavior,
